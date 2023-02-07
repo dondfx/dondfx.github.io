@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      .light-controls {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100px;
+      }
+      .light-button {
+        margin-right: 10px;
+      }
+      .light-text {
+        margin: 0 10px;
+      }
+      .light-label {
+        width: 50px;
+        height: 50px;
+        border-radius: 25px;
+        background-color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 class="center">Light Controller</h1>
+    <div class="light-controls">
+      <button id="light-button" class="light-button">Toggle Light</button>
+      <p id="light-text" class="light-text">Light 1 OFF</p>
+      <div id="light-indicator" class="light-label"></div>
+    </div>
+    <script>
+      const button = document.getElementById("light-button");
+      const text = document.getElementById("light-text");
+      const indicator = document.getElementById("light-indicator");
+      let isOn = false;
+      button.addEventListener("click", function () {
+        isOn = !isOn;
+        text.innerHTML = isOn ? "Light 1 ON" : "Light 1 OFF";
+        indicator.style.backgroundColor = isOn ? "green" : "red";
+      });
+    </script>
+  </body>
+</html>
