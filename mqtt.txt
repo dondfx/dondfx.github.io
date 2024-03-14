@@ -1,2 +1,0 @@
-server="lakmal.weera.com"
-port=9090
